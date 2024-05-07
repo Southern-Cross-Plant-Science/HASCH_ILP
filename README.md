@@ -2,7 +2,9 @@
 
 Used in ***HASCH - A High-throughput Amplicon-based SNP-platform for medicinal Canna-bis and industrial Hemp genotyping applications***
 
-This script takes an input conf file and generates and LP file for input to Gurubi or SCIP optimizer.
+The goal for designing the SNP panel is to select subset of markers that will give the maximum homozygous mismatches between all sample pairs in the input genotype set. The selected markers also have to be evenly distributed in the genome to be usable for genetic map construction, and each marker should have minimal variation in its neighborhood for effective primer hybridization.  
+
+This script takes an input conf file to generates the LP file for input to Gurubi or SCIP optimizer.
 It can also process the optimizer output for visualization and generation of selected probes list
 
 **Usage:**
@@ -10,6 +12,7 @@ python input.conf soln
 
 **Arguments:**
 **input.conf** &nbsp;&nbsp;&nbsp; required config file
+
 **soln**  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(optional) result file from Gurubi(sol) or SCIP(log)  [sol, log] 
 
 
