@@ -43,7 +43,9 @@ Using the included hasch.conf input, vcf2ilp.py hasch.conf will generate ~75Gb o
 **Sample inputs files (available in Zenodo repository)**
 
 hasch.conf   
+
 hasch_input_filtered_57k.vcf.gz
+
 pos57k_ref5m-all.txt
 
 
