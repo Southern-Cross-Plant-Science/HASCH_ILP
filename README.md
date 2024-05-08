@@ -1,4 +1,5 @@
 # SNP genotyping panel design by Integer Linear Programming
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.11149388.svg)](https://doi.org/10.5281/zenodo.11149388)
 
 Used in ***HASCH - A High-throughput Amplicon-based SNP-platform for medicinal Canna-bis and industrial Hemp genotyping applications***
 
