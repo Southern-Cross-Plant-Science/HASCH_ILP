@@ -3,7 +3,7 @@
 
 Used in ***HASCH - A High-throughput Amplicon-based SNP-platform for medicinal Canna-bis and industrial Hemp genotyping applications***
 
-This script takes an input vcf file and generates an LP file for Gurubi or SCIP optimizer. The optimization selects the subset of SNPs that maximizes the number of homozygous mismatches between all sample-pairs in the input genotype data.
+This script takes an input vcf file and generates an LP file for Gurobi or SCIP optimizer. The optimization selects the subset of SNPs that maximizes the number of homozygous mismatches between all sample-pairs in the input genotype data.
 It can also process the optimizer output for visualization and generation of selected probes list
 
 **Usage:**
@@ -12,7 +12,7 @@ It can also process the optimizer output for visualization and generation of sel
 **Arguments:**
 
 - input.conf  :  required config file
-- soln  : (optional) result file from Gurubi(sol) or SCIP(log)  [sol, log]
+- soln  : (optional) result file from Gurobi(sol) or SCIP(log)  [sol, log]
 
 
 The conf file are Python variable assignments, variable=value. Commments should start with #
@@ -24,7 +24,7 @@ The optional input file flankcountfile containing counts of flanking SNPs for al
 The matrix P and pair-wise constraints are saved into files  (*.npy, *.lp.pconstraints) since they are time consuming to generate. Unless recalcP is set to True, the npy and lp.pconstraints files are used on future reruns for the same conf input file. Reruns are performed to generate new LP files for varying objectives or weight adjustments. Each set of settings/objective/constraints/weights should use a unique input.conf, the conf filename is used to uniquely identify the output LP file. Reruns are also performed to process the optimizer result file. When processing result, the same conf file should be used to match with that of the LP file used.
 
 
-Using the included hasch.conf input, vcf2ilp.py hasch.conf will generate ~75Gb of files (uncompressed) and takes at least 8hrs to run. The generated LP file is accepted by [Gurubi](https://www.gurobi.com/solutions/gurobi-optimizer) or [SCIP](https://www.scipopt.org). The optimizer result file should be named  ``LP_filename + .sol`` for Gurubi, or ``LP_filename + .log`` for SCIP. Using the result file, generate the final probe list and histograms using  ``vcf2ilp.py hasch.conf sol`` or  ``vcf2ilp.py hasch.conf log``
+Using the included hasch.conf input, vcf2ilp.py hasch.conf will generate ~75Gb of files (uncompressed) and takes at least 8hrs to run. The generated LP file is accepted by [Gurobi](https://www.gurobi.com/solutions/gurobi-optimizer) or [SCIP](https://www.scipopt.org). The optimizer result file should be named  ``LP_filename + .sol`` for Gurobi, or ``LP_filename + .log`` for SCIP. Using the result file, generate the final probe list and histograms using  ``vcf2ilp.py hasch.conf sol`` or  ``vcf2ilp.py hasch.conf log``
 
 
 
