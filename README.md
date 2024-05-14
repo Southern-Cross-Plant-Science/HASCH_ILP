@@ -42,8 +42,6 @@ Using the included hasch.conf input, vcf2ilp.py hasch.conf will generate ~75Gb o
  
 **Sample inputs files (available in Zenodo repository)**
 
-hasch.conf   
-
 hasch_input_filtered_57k.vcf.gz
 
 pos57k_ref5m-all.txt
@@ -63,7 +61,7 @@ Generates the flanking SNPs count   (like pos57k_ref5m-all.txt)
 
 
 
-**Utility inputs files**
+**Utility inputs files (available in Zenodo repository)**
 
 cs10-gbs-21trich-wgs7ds-allsnps.merge.maf2_fmis6.vcf.gz-poslist.txt   :  SNP list to count neighborhood (from union of WGS7DS, 21TRICH, GBS then filtered)
 
